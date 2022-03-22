@@ -1,0 +1,16 @@
+.mainComponent {
+	position: relative;
+	display: block;
+	min-height: calc(100vh - 145px);
+	padding-bottom: 50px;
+}
+
+/* Phone Responsive */
+@media screen and (max-width: 950px) {
+	.mainComponent {
+		flex-direction: column;
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+}

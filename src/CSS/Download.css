@@ -1,0 +1,131 @@
+.download {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	/* background: rgba(0, 0, 0, 0.945); */
+	display: none;
+	transition: 0.5s;
+}
+.download.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.download .container {
+	position: relative;
+	width: 380px;
+	padding: 30px 20px;
+	background-color: #fff;
+	box-shadow: 0 0 15px #fff3;
+	border-radius: var(--borderRadius);
+}
+@media screen and (max-width: 450px) {
+	.download .container {
+		width: 90%;
+	}
+}
+.download .container .input {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+.download .container .input input {
+	position: relative;
+	border: none;
+	background: none;
+	outline: none;
+	width: 100%;
+	height: 100%;
+	background: #f1f1f1;
+	padding: 0 20px;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: var(--borderRadius);
+}
+.download .container .input input.checkbox {
+	position: relative;
+	width: 10%;
+	height: 100%;
+	border: none;
+	background: #f1f1f1;
+}
+
+.download .container .innerDiv {
+	width: 100%;
+	display: flex;
+	height: 40px;
+	align-items: center;
+}
+.download .container .innerDiv input {
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	margin-right: 10px;
+}
+.download .container .innerDiv button {
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+.download .container .innerDiv.div1 {
+	height: 30px;
+}
+.download .container .innerDiv.div1 p {
+	font-size: 13px;
+}
+@media screen and (max-width: 390px) {
+	.download .container .innerDiv.div1 p {
+		font-size: 11px;
+	}
+}
+.download .container .innerDiv a {
+	font-size: 16px;
+	font-weight: bolder;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: var(--borderRadius);
+}
+.download .container .innerDiv button a i {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 30px;
+}
+.download .container .innerDiv a {
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+}
+.download .container p {
+	font-size: 16px;
+}
+.download .container .innerDiv > a:nth-child(1) {
+	background: #fff;
+	color: red;
+	box-shadow: 0 0 5px #8080808f;
+}
+.download .container .innerDiv button {
+	outline: none;
+	border: none;
+	background: none;
+}
+.download .container .innerDiv button a {
+	background-color: #fff;
+	color: rgb(0, 255, 55);
+	box-shadow: 0 0 5px #8080808f;
+}

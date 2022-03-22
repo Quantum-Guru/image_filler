@@ -1,0 +1,183 @@
+.sideBar {
+	position: relative;
+	width: 80%;
+	height: 120px;
+	background-color: #0001;
+	overflow: hidden;
+	padding: 15px 0;
+	display: block;
+	margin: 20px auto 0;
+	border-radius: var(--borderRadius);
+}
+@media screen and (max-width: 1250px) {
+	.sideBar {
+		width: 90%;
+	}
+}
+.imageSelecter {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.sideBar .imageSelecter .image-upload {
+	position: relative;
+	width: 10%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-right: 2%;
+	background-color: rgba(0, 0, 0, 0.075);
+	border-radius: var(--borderRadius);
+	cursor: pointer;
+}
+.sideBar .imageSelecter .image-upload input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+.sideBar .imageSelecter .image-upload i {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+.sideBar .imageSelecter .image-upload p {
+	font-size: 12px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.div-wrapper {
+	position: relative;
+	width: 80%;
+	height: 100%;
+	display: block;
+	overflow: hidden;
+}
+.imageSelecter .innerDiv {
+	position: relative;
+	width: 100%;
+	display: block;
+	height: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: row;
+	/* overflow: hidden; */
+	margin: 0 auto;
+	overflow-x: scroll;
+}
+.imageSelecter .innerDiv::-webkit-scrollbar {
+	display: none;
+}
+.imageSelecter .innerDiv img {
+	position: relative;
+	height: 100%;
+	margin: 0 7px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+/* .imageSelecter .innerDiv img:hover {
+	border: 2px solid #0002;
+	transform: scale(1.1);
+} */
+:root {
+	--gray: #2e65bf;
+	--darkgray: #1bb0ce;
+}
+
+select {
+	/* Reset Select */
+	appearance: none;
+	outline: 0;
+	border: 0;
+	box-shadow: none;
+	/* Personalize */
+	flex: 1;
+	padding: 0 1em;
+	color: #fff;
+	background-color: var(--darkgray);
+	background-image: none;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+	opacity: 0;
+	display: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+	display: none;
+}
+/* Custom Select wrapper */
+.select {
+	position: relative;
+	display: flex;
+	width: 80%;
+	height: 3em;
+	border-radius: .25em;
+	overflow: hidden;
+	margin: 0 auto;
+	opacity: 0;
+	display: none;
+}
+/* Arrow */
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1em;
+	background-color: rgb(29, 132, 153);
+	transition: .25s all ease;
+	pointer-events: none;
+	opacity: 0;
+	display: none;
+}
+/* Transition */
+.select:hover::after {
+	color: rgb(0, 66, 97);
+}
+
+@media screen and (max-width: 740px) {
+	.sideBar {
+		width: 90%;
+		height: auto;
+	}
+	.sideBar .imageSelecter {
+		flex-direction: column-reverse;
+	}
+	.sideBar .imageSelecter .image-upload {
+		height: 32px;
+		width: 90%;
+		flex-direction: row-reverse;
+		margin: 0;
+	}
+	.sideBar .imageSelecter .image-upload .para {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 13px;
+		margin-right: 10px;
+	}
+	.sideBar .imageSelecter .image-upload p {
+		margin: 0 3px;
+	}
+	.sideBar .imageSelecter .image-upload i {
+		font-size: 14px;
+		margin: 0;
+	}
+	.sideBar .imageSelecter .div-wrapper {
+		width: 90%;
+		height: 100px;
+		margin-bottom: 10px;
+	}
+}
